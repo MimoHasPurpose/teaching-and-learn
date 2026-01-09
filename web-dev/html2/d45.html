@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider</title>
+    <style>
+
+        img {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #333;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Image Gallery</h2>
+    <img id="gallery" src="images/img1.jpg" alt="Gallery Image">
+    <br>
+    <button onclick="prevImage()">Previous Image</button>
+    <button onclick="nextImage()">Next Image</button>
+    <script>
+        // Array of image paths
+        const images = [
+            "images/img1.jpg",
+            "images/img2.jpg",
+            "images/img3.jpg"
+        ];
+        let currentIndex = 0;
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById("gallery").src = images[currentIndex];
+        }
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            document.getElementById("gallery").src = images[currentIndex];
+        }
+    </script>
+</body>
+</html>
