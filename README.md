@@ -17,9 +17,9 @@
     - refer pytorch documentation
     
 
-## aims and goals:
+<!-- ## aims and goals:
 - solve dsa questions
 - win hackathons
 - work on good projects
 - make useful projects
-- open-source contribution
+- open-source contribution -->
